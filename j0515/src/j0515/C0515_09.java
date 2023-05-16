@@ -96,8 +96,8 @@ public class C0515_09 {
 				modifyName= scan.next();
 				
 				int chk=0; //찾을 학생이 없을 경우 0, 있으면 1 
-				for(int i = 0 ; i < count  ; i++) {
-					if(name[i].equals(modifyName)) {
+				for (int i = 0; i < count; i++) {
+					if (name[i].equals(modifyName)) {
 						System.out.println("[ 수정 과목 선택 ]");
 						System.out.println("----------------");
 						System.out.println("1.국어");
@@ -105,31 +105,27 @@ public class C0515_09 {
 						System.out.println("3.수학");
 						System.out.println("수정할 과목을 선택하시오");
 						input = scan.nextInt();
-						chk =1; //찾는 학생이 있을 경우 1로 변경 
-						
-						switch(input){
-						
-						case 1:
-							//score[i][0] = 국어, score[i][1] = 영어,score[i][2] = 수학, score[i][3] = 합계
-							System.out.println("현재 국어 점수: " + score[i][0]);
-							System.out.println("-----------------------------");
-							System.out.println("변경할 국어 점수를 입력하세요");
-							score[i][0] = scan.nextInt(); //수정할 점수 입력 
-							score[i][3] = score[i][0] + score[i][1]+score[i][2]; //합계 수정
-							avg[i] = score[i][3]/3.0; //평균 수정 
-							System.out.println("[ 수정 완 ]");
-							System.out.println();
-							break;
-						}//switch
-						
-					}//if
-				}//for
-				
+						chk = 1; // 찾는 학생이 있을 경우 1로 변경
+
+						// score[i][0] = 국어, score[i][1] = 영어,score[i][2] = 수학, score[i][3] = 합계
+						System.out.println(title[input] + "점수: " + score[i][input - 1]); // input에서 숫자를 입력받기 때문에
+						System.out.println("-----------------------------");
+						System.out.println("변경할 " + title[input] + " 점수를 입력하세요");
+						score[i][input - 1] = scan.nextInt(); // 수정할 점수 입력
+						score[i][3] = score[i][0] + score[i][1] + score[i][2]; // 합계 수정
+						avg[i] = score[i][3] / 3.0; // 평균 수정
+						System.out.println("[ 수정 완 ]");
+						System.out.println();
+						break;
+
+					} // if
+				} // for
+
 				//chk
 				if(chk == 0) {
 					System.out.println("[찾는 학생 없음 ]");
 					System.out.println("찾는 학생이 없습니다.");
-					System.out.println();
+					System.out.println("");
 				}
 			}// switch
 
