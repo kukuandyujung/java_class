@@ -1,32 +1,29 @@
 
 public class Student {
-
-	static String[] title = {"학번","이름","국어","영어","수학","합계","평균","등수"};
-
-	static int count=1000;  //클래스변수 - 객체선언없이 클래스명.변수명
-	int stuNo;              //인스턴스변수 - 객체선언후 참조변수명.변수명
-	String name;
-	int kor;
-	int eng;
-	int math;
-	int total;
-	double avg;
-	int rank;
-
-	{
-		count++;
-		stuNo = count;
-	}
-
-	Student(){}  //생성자 - 클래스명과일치, void 없슴.
-	Student(String name,int kor,int eng,int math){ //생성자
+	
+	private int stuNO;
+	private String name; 
+	private int kor;
+	private int eng;
+	private int math;
+	private int total;
+	private double avg;
+	private int rank;
+	private String createDate;
+	private String updateDate;
+	
+	
+	Student(){}
+	Student(int stuNo, String name, int kor, int eng, int math, String CreateDate){
+		this.stuNO = stuNo; //this 앞 학번은 인스턴스 변수, 뒤에 있는 학번은 지역변수이다. 
 		this.name = name;
-		this.kor = kor;
+		this.kor =kor;
 		this.eng = eng;
 		this.math = math;
-		this.total = kor + eng + math;
-		this.avg = this.total/3.0;
+		this.total = total;
+		this.avg = avg;
+		this.createDate =createDate;
+	}
 	}
 
 
-}
