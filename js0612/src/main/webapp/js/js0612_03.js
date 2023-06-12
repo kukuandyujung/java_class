@@ -1,0 +1,10 @@
+//자바스크립트는 html이 없으면 실행이 될 수 없다. 
+
+var a =10; 
+var b =3;
+var result =a>b?"정답":"오답";
+
+document.write(result,"<br>");
+
+var num =prompt("숫자를 입력하세요");
+document.write("입력한 숫자:", num );
