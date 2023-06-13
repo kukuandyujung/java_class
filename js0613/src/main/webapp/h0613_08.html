@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script  src="http://code.jquery.com/jquery-latest.min.js">
+			//$(document).ready(function(){}); 이게 정식 밑이 약식 
+// 	        function titleAdd(){
+// 				document.getElementById("h1").innerText= "뉴진스민지";}
+			$(function(){
+				$("#h1").text("뉴진스-민지");
+			});
+			
+			$(document).ready(function(){});
+		</script>
+		<title>제이쿼리</title>
+		<style type="text/css">
+			*{padding: 0; margin: 0;}
+			div{width: 300px; height: 300px;}
+			img{width: 300px;}
+		</style>
+	</head>
+	<body>
+		<button onclick="titleAdd()">제목 변경</button>
+		<h2 id="h1">제목</h2>
+		<div id="d01">
+			<img src="images/min1.jpg">
+		</div>
+		
+	</body>
+</html>
