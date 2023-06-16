@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,28 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/style_join02_info_input.css">
 		<link rel="stylesheet" type="text/css" href="css/style_footer.css">
 		<title>회원가입 - 회원정보입력</title>
-		<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-		<script>
-		
-			function openZip(){
-// 				alert("다음 우편번호가 열림");
-		    new daum.Postcode({
-		        oncomplete: function(data) {
-		            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
-		            // 예제를 참고하여 다양한 활용법을 확인해 보세요.
-		            
-		            console.log(data);
-		            $("#f_postal").val(data.zonecode);
-		            $("#address1").val(data.address);
-		            $("#address2").val(data.addressEnglish);
-		            
-		        }
-		    }).open();
-		    
-		}//openZip()
-		
-	   </script>
 	</head>
 	<body>
 		<header>
@@ -65,7 +46,7 @@
 		
 		
 		<section>
-			<form name="agree" method="get" action="join03_success.html">
+			<form name="agree" method="get" action="check.jsp">
 				<div id="subBanner"></div>
 				<div id="locationN">
 					<ul>
@@ -107,7 +88,7 @@
 							<label for="name">이름</label>
 						</dt>
 						<dd>
-							<input type="text" id="name" name="name" required/>
+							<input type="text" id="name" name="name" />
 						</dd>
 					</dl>
 					<dl id="join_id_dl">
@@ -116,7 +97,7 @@
 							<label for="id">아이디</label>
 						</dt>
 						<dd>
-							<input type="text" id="id" name="id" minlength="4" maxlength="16" required/>
+							<input type="text" id="id" name="id" />
 							<input type="button" value="중복확인"/>
 							<span>4~16자리의 영문, 숫자, 특수기호(_)만 사용하실 수 있습니다.</span>
 							<span>첫 글자는 영문으로 입력해 주세요.</span>
@@ -128,7 +109,7 @@
 							<label for="pw1">비밀번호</label>
 						</dt>
 						<dd>
-							<input type="password" id="pw1" name="pw1" minlength="8" required />
+							<input type="password" id="pw1" name="pw1"  />
 							<span>영문, 숫자, 특수문자 중 2종류 조합 시 10자리 이상 입력</span>
 							<span>영문, 숫자, 특수문자 모두 조합 시 8자리 이상 입력</span>
 						</dd>
@@ -139,7 +120,7 @@
 							<label for="pw2">비밀번호 확인</label>
 						</dt>
 						<dd>
-							<input type="password" id="pw2" name="pw2" minlength="8" required />
+							<input type="password" id="pw2" name="pw2"  />
 							<span>비밀번호를 다시 한번 입력해 주세요.</span>
 						</dd>
 					</dl>
@@ -149,9 +130,9 @@
 							<label for="mail_id">이메일</label>
 						</dt>
 						<dd>
-							<input type="text" id="mail_id" name="mail_id" required />
+							<input type="text" id="mail_id" name="mail_id"  />
 							<span>@</span>
-							<input type="text" id="main_tail" name="mail_tail" required />
+							<input type="text" id="main_tail" name="mail_tail"  />
 							<select>
 								<option selected>직접입력</option>
 								<option>지메일</option>
@@ -173,12 +154,12 @@
 							<label for="">주소</label>
 						</dt>
 						<dd>
-							<input type="text" id="f_postal" name="f_postal" required />
+							<input type="text" id="f_postal" name="f_postal"  />
 							<span>-</span>
-							<input type="text" id="l_postal" name="l_postal" required />
-							<input type="button" onclick="openZip()" value="우편번호"/>
-							<input type="text" id="address1" name="address1" required />
-							<input type="text" id="address2" name="address2" required />
+							<input type="text" id="l_postal" name="l_postal"  />
+							<input type="button" value="우편번호"/>
+							<input type="text" id="address1" name="address1"  />
+							<input type="text" id="address2" name="address2"  />
 						</dd>
 						
 					</dl>
@@ -189,11 +170,11 @@
 							<label for="f_tell">휴대전화</label>
 						</dt>
 						<dd>
-							<input type="text" id="f_tell" name="f_tell" maxlength="3" required />
+							<input type="text" id="f_tell" name="f_tell"  />
 							<span> - </span>
-							<input type="text" id="m_tell" name="m_tell" maxlength="4" required />
+							<input type="text" id="m_tell" name="m_tell"  />
 							<span> - </span>
-							<input type="text" id="l_tell" name="l_tell" maxlength="4" required />
+							<input type="text" id="l_tell" name="l_tell"  />
 						</dd>
 					</dl>
 					<dl id="join_birth_dl">
@@ -367,51 +348,51 @@
 						<dd>
 							<ul>
 								<li>
-									<input type="checkbox" name="computer" id="computer" value="computer" />
+									<input type="checkbox" name="hobbys" id="computer" value="computer" />
 									<label for="computer">컴퓨터/인터넷</label>
 								</li>
 								<li>
-									<input type="checkbox" name="movie" id="movie" value="movie" />
+									<input type="checkbox" name="hobbys"  id="movie" value="movie" />
 									<label for="movie">영화/비디오</label>
 								</li>
 								<li>
-									<input type="checkbox" name="music" id="music" value="music" />
+									<input type="checkbox" name="hobbys" id="music" value="music" />
 									<label for="music">음악</label>
 								</li>
 								<li>
-									<input type="checkbox" name="shopping" id="shopping" value="shopping" />
+									<input type="checkbox" name="hobbys" id="shopping" value="shopping" />
 									<label for="shopping">쇼핑</label>
 								</li>
 								<li>
-									<input type="checkbox" name="game" id="game" value="game" />
+									<input type="checkbox" name="hobbys" id="game" value="game" />
 									<label for="game">게임</label>
 								</li>
 								<li>
-									<input type="checkbox" name="culture" id="culture" value="culture" />
+									<input type="checkbox" name="hobbys" id="culture" value="culture" />
 									<label for="culture">문화/예술</label>
 								</li>
 								<li>
-									<input type="checkbox" name="parenting" id="parenting" value="parenting" />
+									<input type="checkbox" name="hobbys" id="parenting" value="parenting" />
 									<label for="parenting">육아/아동</label>
 								</li>
 								<li>
-									<input type="checkbox" name="cooking" id="cooking" value="cooking" />
-									<label for="parenting">요리</label>
+									<input type="checkbox" name="hobbys" id="cooking" value="cooking" />
+									<label for="cooking">요리</label>
 								</li>
 								<li>
-									<input type="checkbox" name="interier" id="interier" value="interier" />
+									<input type="checkbox" name="hobbys" id="interier" value="interier" />
 									<label for="interier">인테리어</label>
 								</li>
 								<li>
-									<input type="checkbox" name="leisure" id="leisure" value="leisure" />
+									<input type="checkbox" name="hobbys" id="leisure" value="leisure" />
 									<label for="leisure">레저/여가</label>
 								</li>
 								<li>
-									<input type="checkbox" name="health" id="health" value="health" />
+									<input type="checkbox" name="hobbys" id="health" value="health" />
 									<label for="health">건강/다이어트</label>
 								</li>
 								<li>
-									<input type="checkbox" name="fashion" id="fashion" value="fashion" />
+									<input type="checkbox" name="hobbys" id="fashion" value="fashion" />
 									<label for="fashion">패션/미용</label>
 								</li>
 							</ul>

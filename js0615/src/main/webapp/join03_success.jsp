@@ -39,11 +39,11 @@
 				</ul>
 			</nav>
 		</header>
-
-
-
-
-
+		
+		
+		
+		
+		
 		<section>
 			<div id="subBanner"></div>
 			<div id="locationN">
@@ -53,11 +53,11 @@
 					<li>회원가입완료</li>
 				</ul>
 			</div>
-
+			
 			<div id="sub_top_area">
 				<h3>회원가입</h3>
 			</div>
-
+			
 			<div id="join_step_div">
 				<ul>
 					<li>
@@ -74,25 +74,26 @@
 					</li>
 				</ul>
 			</div>
-
+			
 			<div id="join_success_div">
 				<p>
 					감사합니다.
 					<strong>회원가입이 완료되었습니다.</strong>
-					<strong>가입한 아이디 : <%= request.getParameter("userId") %> </strong>
-					<strong>이름 : <%= request.getParameter("name") %> </strong>
+					<strong>아이디 :<%= request.getParameter("id") %></strong>
+					<strong>이름 :<%= request.getParameter("name") %></strong>
+				
 				</p>
 			</div>	
-
-
+				
+				
 		</section>
-
-
-
-
-
-
-
+		
+		
+		
+		
+		
+		
+		
 		<footer>
 			<div id="footer_wrap">
 				<div id="footer_cont">
@@ -129,9 +130,9 @@
 					</div>
 				</div>
 			</div>
-
-
-
+		
+		
+		
 		</footer>
 	</body>
 </html>
